@@ -14,7 +14,7 @@ alias ~="cd ~"
 
 # LS flags
 alias ls='ls -hFGA'
-alias ll='ls -l'
+alias ll='ls -la'
 
 # Always enable colored `grep` output
 alias grep='grep --color=auto'

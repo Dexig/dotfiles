@@ -4,27 +4,27 @@
 source $BASEDIR/colors.sh
 
 APPS=(
-	# Core
-	"spectacle" \
-	"flux" \
-	"java" \
+  # Core
+  "spectacle" \
+  "flux" \
+  "java" \
 
-	# Dev
-	"iterm2" \
-	"visual-studio-code" \
-	"postman" \
-	"virtualbox" \
-	"docker" \
+  # Dev
+  "iterm2" \
+  "visual-studio-code" \
+  "postman" \
+  "virtualbox" \
+  "docker" \
 
-	# Communications
-	"telegram" \
-	"slack"
+  # Communications
+  "telegram" \
+  "slack"
 )
 
 echo
 echo "${YELLOW}Install Apps from Cask...${NC}"
 if hash "brew" 2>/dev/null; then
-	for app in ${APPS[@]}; do
-		brew cask install $app
-	done
+  for app in ${APPS[@]}; do
+    brew cask install $app
+  done
 fi

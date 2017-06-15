@@ -4,28 +4,31 @@
 source $BASEDIR/colors.sh
 
 EXTENSIONS=(
-	"CoenraadS.bracket-pair-colorizer" \
-	"EditorConfig.EditorConfig" \
-	"PeterJausovec.vscode-docker" \
-	"akamud.vscode-javascript-snippet-pack" \
-	"be5invis.vscode-icontheme-nomo-dark" \
-	"dbaeumer.vscode-eslint" \
-	"donjayamanne.githistory" \
-	"donjayamanne.python" \
-	"eg2.tslint" \
-	"emilast.LogFileHighlighter" \
-	"mkxml.vscode-filesize" \
-	"mrmlnc.vscode-duplicate" \
-	"oderwat.indent-rainbow" \
-	"pprice.better-merge" \
-	"progre.promise-snippets" \
-	"sysoev.vscode-open-in-github"
+  "2gua.rainbow-brackets"\
+  "anseki.vscode-color"\
+  "azemoh.one-monokai"\
+  "christian-kohler.path-intellisense"\
+  "crisward.riot-tag"\
+  "donjayamanne.python"\
+  "eg2.tslint"\
+  "Equinusocio.vsc-material-theme"\
+  "joelday.docthis"\
+  "mrmlnc.vscode-autoprefixer"\
+  "mrmlnc.vscode-csscomb"\
+  "mrmlnc.vscode-jade-snippets"\
+  "ms-mssql.mssql"\
+  "oderwat.indent-rainbow"\
+  "robertohuertasm.vscode-icons"\
+  "samverschueren.linter-xo"\
+  "shanoor.vscode-nginx"\
+  "walli.vsc-tasks"\
+  "zhuangtongfa.material-theme"
 )
 
 echo
 echo "${YELLOW}Install VS Code extensions${NC}"
 if hash "code" 2>/dev/null; then
-	for ext in ${EXTENSIONS[@]}; do
-		code --install-extension $ext
-	done
+  for ext in ${EXTENSIONS[@]}; do
+    code --install-extension $ext
+  done
 fi

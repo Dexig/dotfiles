@@ -1,25 +1,7 @@
 [
-	// Correct work with Emmet
-	{
-		"key": "tab",
-		"command": "-acceptSelectedSuggestion"
-	},
-
-	// Suggestions
-	{
-		"key": "alt+space",
-		"command": "editor.action.triggerSuggest",
-		"when": "editorHasCompletionItemProvider && editorTextFocus && !editorReadonly"
-	},
-	{
-		"key": "alt+space",
-		"command": "toggleSuggestionDetails",
-		"when": "editorTextFocus && suggestWidgetVisible"
-	},
-
-	// Window
-	{
-		"key": "alt+w",
-		"command": "workbench.action.switchWindow"
-	}
+  // Correct work with Emmet
+  {
+    "key": "tab",
+    "command": "-acceptSelectedSuggestion"
+  }
 ]

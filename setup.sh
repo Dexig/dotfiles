@@ -16,26 +16,26 @@ echo "${YELLOW}Configuring brew...${NC}"
 source $BASEDIR/brew.sh
 
 CONFIGS=(
-	".bash_aliases" \
-	".bash_functions" \
-	".bash_profile" \
-	".bash_powerline" \
-	".editorconfig" \
-	".gitconfig" \
-	".gitignore" \
-	".inputrc"
+  ".bash_aliases" \
+  ".bash_functions" \
+  ".bash_profile" \
+  ".bash_powerline" \
+  ".editorconfig" \
+  ".gitconfig" \
+  ".gitignore" \
+  ".inputrc"
 )
 
 echo
 echo "${YELLOW}Backup configs...${NC}"
 for file in ${CONFIGS[@]}; do
-	if [ -f ~/$file ]; then
-		mkdir -p ~/configs-backup && cp ~/$file ~/configs-backup/$file
+  if [ -f ~/$file ]; then
+    mkdir -p ~/configs-backup && cp ~/$file ~/configs-backup/$file
 
-		if [ $? -eq 0 ]; then
-			echo "~/$file (${GREEN}backuped${NC})"
-		fi
-	fi
+    if [ $? -eq 0 ]; then
+      echo "~/$file (${GREEN}backuped${NC})"
+    fi
+  fi
 done
 unset file
 
@@ -53,11 +53,11 @@ GIT_EMAIL=${GIT_EMAIL:-$CURRENT_GIT_EMAIL}
 echo
 echo "${YELLOW}Copying configs...${NC}"
 for file in ${CONFIGS[@]}; do
-	cp $BASEDIR/$file ~/$file
+  cp $BASEDIR/$file ~/$file
 
-	if [ $? -eq 0 ]; then
-		echo "~/$file (${GREEN}copied${NC})"
-	fi
+  if [ $? -eq 0 ]; then
+    echo "~/$file (${GREEN}copied${NC})"
+  fi
 done
 unset file
 
@@ -71,18 +71,18 @@ source $BASEDIR/cask.sh
 echo
 echo "${YELLOW}Install some installers...${NC}"
 for file in $(ls ./installers); do
-	source $BASEDIR/installers/$file
+  source $BASEDIR/installers/$file
 done
 unset file
 
 echo
 echo "${YELLOW}Configuring VS Code...${NC}"
 for file in {locale,settings,keybindings}.json; do
-	sudo cp $BASEDIR/.vscode/$file ~/Library/Application\ Support/Code/User/$file
+  sudo cp $BASEDIR/.vscode/$file ~/Library/Application\ Support/Code/User/$file
 
-	if [ $? -eq 0 ]; then
-		echo ".vscode/$file (${GREEN}copied${NC})"
-	fi
+  if [ $? -eq 0 ]; then
+    echo ".vscode/$file (${GREEN}copied${NC})"
+  fi
 done
 unset file
 
