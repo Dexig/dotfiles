@@ -1,7 +1,3 @@
-[user]
-  name = dexig
-  email = dexig@mail.ru
-
 [core]
   editor = code --wait
   autocrlf = input
@@ -15,16 +11,16 @@
   cob = checkout -b
   cp = cherry-pick
   ci = commit
-  up = pull
+  up = pull --ff-only
   di = diff
   br = branch
+  dt = difftool
 
   tags = tag -l
   branches = branch -a
   remotes = remote -v
 
-  save = !git add -A && git commit -m "SAVEPOINT"
-  wip = !git add -u && git commit -m "WIP"
+  fixup = !git commit -a --fixup HEAD && git rebase -i --autosquash HEAD~2
   undo = reset HEAD~1 --soft
 
   # Pretty log for current branch
@@ -35,6 +31,8 @@
 
   # Get hash of latest commit
   hash = show -s --format=%H
+
+  save = !git add -A && git commit -m "SAVEPOINT"
 
 [color]
   ui = auto
@@ -55,3 +53,15 @@
   added = yellow
   changed = green
   untracked = cyan
+
+[filter "lfs"]
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge --skip %f
+  process = git-lfs filter-process --skip
+  required = true
+[hub]
+  host = github.yandex-team.ru
+[diff]
+  tool = default-difftool
+[difftool "default-difftool"]
+  cmd = code --wait --diff $LOCAL $REMOTE

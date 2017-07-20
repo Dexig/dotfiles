@@ -13,6 +13,7 @@ APPS=(
   "iterm2" \
   "visual-studio-code" \
   "postman" \
+  "hub"
   "virtualbox" \
   "docker" \
 

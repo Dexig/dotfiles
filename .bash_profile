@@ -1,13 +1,6 @@
 # Add `~/bin` to the `$PATH`
 # export PATH="$HOME/bin:$PATH";
 
-# Load the shell dotfiles, and then some:
-for file in .{bash_aliases,bash_functions}; do
-  if [ -f ~/$file ]; then
-    . ~/$file
-  fi
-done
-
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob;
 
@@ -32,6 +25,13 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
   source $(brew --prefix)/etc/bash_completion.d/git-completion.bash
   source $(brew --prefix)/etc/bash_completion.d/git-prompt.sh
 fi
+
+# Load the shell dotfiles, and then some:
+for file in .{bash_aliases,bash_functions}; do
+  if [ -f ~/$file ]; then
+    . ~/$file
+  fi
+done
 
 # Enable tab completion for `g` by marking it as an alias for `git`
 if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
