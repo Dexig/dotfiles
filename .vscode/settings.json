@@ -1,18 +1,18 @@
 {
   "editor.formatOnType": true,
   "editor.renderWhitespace": "all",
-  "editor.tabSize": 2,
+  "editor.tabSize": 4,
   "editor.rulers": [120],
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
   "files.eol": "\n",
   "xo.enable": true,
   "xo.options": {
-    "space": 2,
+    "space": 4,
     "rules": {
       "babel/object-curly-spacing": 0,
       "object-curly-spacing": [
-        2,
+        4,
         "always"
       ]
     }
@@ -43,5 +43,18 @@
   "typescript.check.tscVersion": false,
   "vsicons.dontShowNewVersionMessage": true,
   "workbench.colorTheme": "One Dark Pro",
-  "cSpell.ignoreRegExpList": ["[а-я]+"]
+  "cSpell.ignoreRegExpList": [
+    "repo",
+    "repository",
+    "orgs",
+    "serp",
+  "searel", "startrek", "hotfix"],
+  "files.exclude": {
+    "**/node_modules": true
+  },
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "editor.minimap.enabled": false,
+  "cSpell.language": "en,ru",
+  "gitlens.codeLens.enabled": false
 }

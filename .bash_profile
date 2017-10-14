@@ -47,3 +47,5 @@ source ~/.bash_powerline
 # Add NVS (TODO: move to ...?)
 export NVS_HOME="/usr/local/nvs"
 [ -s "$NVS_HOME/nvs.sh" ] && . "$NVS_HOME/nvs.sh"
+
+export PATH=$PATH:~/Documents/Playground/sandbox/local-sandbox/bin

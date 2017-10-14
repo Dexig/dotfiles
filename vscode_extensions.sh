@@ -6,14 +6,11 @@ source $BASEDIR/colors.sh
 EXTENSIONS=(
   "2gua.rainbow-brackets"/
   "Equinusocio.vsc-material-theme"/
-  "anseki.vscode-color"/
   "azemoh.one-monokai"/
   "christian-kohler.path-intellisense"/
   "donjayamanne.python"/
-  "donjayamanne.python"/
   "eamodio.gitlens"/
   "eg2.tslint"/
-  "huizhou.githd"/
   "joelday.docthis"/
   "mrmlnc.vscode-autoprefixer"/
   "mrmlnc.vscode-csscomb"/
@@ -26,6 +23,7 @@ EXTENSIONS=(
   "shanoor.vscode-nginx"/
   "spoonscen.es6-mocha-snippets"/
   "streetsidesoftware.code-spell-checker"/
+  "streetsidesoftware.code-spell-checker-russian"/
   "walli.vsc-tasks"/
   "zhuangtongfa.material-theme"/
   "zxh404.vscode-proto3"

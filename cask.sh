@@ -19,7 +19,10 @@ APPS=(
 
   # Communications
   "telegram" \
-  "slack"
+  "slack" \
+
+  # work
+  "todoist"
 )
 
 echo

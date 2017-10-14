@@ -3,5 +3,14 @@
   {
     "key": "tab",
     "command": "-acceptSelectedSuggestion"
+  },
+  {
+    "key": "ctrl+shift+z",
+    "command": "config.editor.minimap.enabled"
+  },
+  {
+    "key": "alt+space",
+    "command": "editor.action.triggerSuggest",
+    "when": "editorHasCompletionItemProvider && editorTextFocus && !editorReadonly"
   }
 ]

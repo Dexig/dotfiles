@@ -1,6 +1,7 @@
 [core]
   editor = code --wait
   autocrlf = input
+	excludesfile = ~/.gitignore
 
 [help]
   autocorrect = 1
@@ -11,7 +12,7 @@
   cob = checkout -b
   cp = cherry-pick
   ci = commit
-  up = pull --ff-only
+  up = pull
   di = diff
   br = branch
   dt = difftool
@@ -20,7 +21,7 @@
   branches = branch -a
   remotes = remote -v
 
-  fixup = !git commit -a --fixup HEAD && git rebase -i --autosquash HEAD~2
+  amend = !git add . && git ci --amend --no-edit
   undo = reset HEAD~1 --soft
 
   # Pretty log for current branch
