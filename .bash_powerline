@@ -12,6 +12,7 @@ __powerline() {
   readonly FG_BRACKETS="\[$(tput setaf 1)\]"
   readonly FG_PATH="\[$(tput setaf 4)\]"
   readonly FG_GIT="\[$(tput setaf 3)\]"
+  readonly FG_NODE="\[$(tput setaf 9)\]"
   readonly FG_ERROR="\[$(tput setaf 1)\]"
   readonly FG_SUCCESS="\[$(tput setaf 2)\]"
 
@@ -59,10 +60,13 @@ __powerline() {
     # Check the exit code of the previous command and display different
     # colors in the prompt accordingly.
     if [ $? -eq 0 ]; then
-      local BG_EXIT="$FG_SUCCESS"
+      local FG_EXIT="$FG_SUCCESS"
     else
-      local BG_EXIT="$FG_ERROR"
+      local FG_EXIT="$FG_ERROR"
     fi
+
+    local NODE_VERSION="$(node -v | cut -dv -f2)"
+    # local NPM_VERSION="$(npm -v)"
 
     PS1="$FG_PATH \w $RESET"
     # Bash by default expands the content of PS1 unless promptvars is disabled.
@@ -77,7 +81,7 @@ __powerline() {
       # promptvars is disabled. Avoid creating unnecessary env var.
       PS1+="$FG_GIT$(__git_info)$RESET"
     fi
-    PS1+="$BG_EXIT $PS_SYMBOL $RESET"
+    PS1+="$FG_NODE $NODE_VERSION $FG_EXIT $PS_SYMBOL $RESET"
   }
 
   PROMPT_COMMAND=ps1

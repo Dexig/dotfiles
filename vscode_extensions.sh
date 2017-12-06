@@ -5,28 +5,29 @@ source $BASEDIR/colors.sh
 
 EXTENSIONS=(
   "2gua.rainbow-brackets"/
-  "Equinusocio.vsc-material-theme"/
   "azemoh.one-monokai"/
   "christian-kohler.path-intellisense"/
-  "donjayamanne.python"/
+  "dbaeumer.vscode-eslint"/
   "eamodio.gitlens"/
   "eg2.tslint"/
+  "ipatalas.vscode-postfix-ts"/
   "joelday.docthis"/
+  "jordan-craig.vspizza"/
   "mrmlnc.vscode-autoprefixer"/
   "mrmlnc.vscode-csscomb"/
   "mrmlnc.vscode-jade-snippets"/
+  "ms-python.python"/
   "nwhatt.chai-snippets"/
   "oderwat.indent-rainbow"/
   "patrys.vscode-code-outline"/
   "robertohuertasm.vscode-icons"/
   "samverschueren.linter-xo"/
+  "sequoia.loopback-json-schemas"/
   "shanoor.vscode-nginx"/
   "spoonscen.es6-mocha-snippets"/
   "streetsidesoftware.code-spell-checker"/
   "streetsidesoftware.code-spell-checker-russian"/
-  "walli.vsc-tasks"/
-  "zhuangtongfa.material-theme"/
-  "zxh404.vscode-proto3"
+  "zhuangtongfa.material-theme"
 )
 
 echo

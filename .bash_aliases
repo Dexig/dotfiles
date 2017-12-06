@@ -6,7 +6,6 @@ alias wg="cd ~/Documents/GitHub"
 alias wt="cd ~/Documents/Texts"
 alias wg="cd ~/Documents/Playground"
 
-# ssh tunnel to vm
 alias sbt="ssh -R 9000:localhost:3000 -N sb -v"
 
 # Easier navigation: .., ...
@@ -49,6 +48,8 @@ alias gca='git amend'
 alias gbu='git branch -vv'
 alias gvr='git remotes'
 
+# reset staged area and wc
+alias grHH='git reset --hard HEAD && git clean -f'
 # Cancel staged changes
 alias grH='git reset HEAD'
 # Undo last commit ->  all changes in commit would be transfer to staged area
@@ -80,3 +81,12 @@ alias gpcf='git push -u origin +`gbc`'
 alias gfu='git fetch upstream'
 alias grud='git rebase upstream/dev'
 alias guf='gfu && grud'
+
+function gril () {
+  gumc
+  cherry_commits=`git cherry master | wc -l | sed -e 's/^[ \t]*//'`
+
+  echo HEAD~$cherry_commits
+
+  git rebase -i HEAD~$cherry_commits --ignore-date
+}

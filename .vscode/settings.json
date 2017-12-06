@@ -1,23 +1,20 @@
 {
   "editor.formatOnType": true,
   "editor.renderWhitespace": "all",
+  "editor.minimap.enabled": false,
   "editor.tabSize": 4,
-  "editor.rulers": [120],
+  "editor.rulers": [
+    120
+  ],
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
+  "files.autoSave": "onFocusChange",
   "files.eol": "\n",
-  "xo.enable": true,
-  "xo.options": {
-    "space": 4,
-    "rules": {
-      "babel/object-curly-spacing": 0,
-      "object-curly-spacing": [
-        4,
-        "always"
-      ]
-    }
+  "files.exclude": {
+    "**/.git": true,
+    "**/node_modules": true
   },
-    "autoprefixer.browsers": [
+  "autoprefixer.browsers": [
     "Explorer >= 9",
     "Edge >= 12",
     "ExplorerMobile >= 10",
@@ -29,32 +26,53 @@
     "iOS >= 7",
     "BlackBerry >= 10"
   ],
-  "files.autoSave": "onFocusChange",
   "emmet.syntaxProfiles": {
     "htmltag": "html",
     "jadetag": "jade"
   },
   "vsicons.projectDetection.disableDetect": true,
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "One Dark Pro Vivid",
   "window.zoomLevel": 0,
   "[markdown]": {
     "files.trimTrailingWhitespace": false
   },
   "typescript.check.tscVersion": false,
   "vsicons.dontShowNewVersionMessage": true,
-  "workbench.colorTheme": "One Dark Pro",
+  "cSpell.language": "en,ru",
   "cSpell.ignoreRegExpList": [
     "repo",
+    "Oleg",
+    "Ozeritskiy",
+    "dexig",
+    "yandex",
     "repository",
+    "microservices",
+    "promisify",
     "orgs",
+    "fileoverview",
     "serp",
-  "searel", "startrek", "hotfix"],
-  "files.exclude": {
-    "**/node_modules": true
-  },
+    "genisys",
+    "searel",
+    "startrek",
+    "hotfix"
+  ],
   "python.linting.pylintEnabled": false,
   "python.linting.flake8Enabled": true,
-  "editor.minimap.enabled": false,
-  "cSpell.language": "en,ru",
-  "gitlens.codeLens.enabled": false
+  "gitlens.codeLens.enabled": false,
+  "eslint.nodePath": "./node_modules/serp-ci",
+  "xo.enable": true,
+  "xo.options": {
+    "space": 4,
+    "rules": {
+      "babel/object-curly-spacing": 0,
+      "object-curly-spacing": [
+        4,
+        "always"
+      ]
+    }
+  },
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.startupEditor": "newUntitledFile",
+  "git.enableSmartCommit": true,
+  "vspizza.customPizza": "https://www.papajohns.ru/"
 }
