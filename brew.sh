@@ -29,5 +29,8 @@ fi;
 # Install Python
 brew install python
 
+# Install github HUB
+brew install hub
+
 # Remove outdated versions from the cellar.
 brew cleanup

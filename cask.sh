@@ -13,16 +13,12 @@ APPS=(
   "iterm2" \
   "visual-studio-code" \
   "postman" \
-  "hub"
   "virtualbox" \
   "docker" \
 
   # Communications
   "telegram" \
-  "slack" \
-
-  # work
-  "todoist"
+  "slack"
 )
 
 echo
