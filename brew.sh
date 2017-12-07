@@ -32,5 +32,9 @@ brew install python
 # Install github HUB
 brew install hub
 
+# Install git and git-lfs
+brew install git
+brew install git-lfs
+
 # Remove outdated versions from the cellar.
 brew cleanup
